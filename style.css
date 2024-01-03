@@ -1,0 +1,112 @@
+
+
+
+
+:root {
+    /* backgrounds colors */
+
+    /* basicos */
+    --background: white;
+    --menuBackground: rgba(128, 128, 128, 0.734);
+
+    /* botones */
+    --btnBackground: rgba(48, 47, 47, 0.192);
+    --btnHover: white;
+    --btnCategoryHover: rgba(44, 80, 158, 0.575);
+
+    /* text */
+    --title: rgb(43, 42, 42),font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;;
+    --subtitle: grey;
+
+    --txt: rgb(11, 11, 129);
+    --txtb: black;
+
+    --btnTxt: black;
+    --btnhvr: green;
+
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+/* Testing */
+
+/* div{
+    border: 1px solid red;
+}
+section{
+    border: 1px solid blue;
+    padding: 5px;
+}
+img{
+    border: 1px solid white;
+} */
+/* nav{
+    border: 1px solid yellow;
+} */
+
+body{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+main{
+    width: 100%;
+    max-width: 1920px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    display: flex;
+}
+
+/* Estilos principales */
+
+
+.logoCont{
+    padding: 5px;
+    padding: 5px;
+    max-width: 100px;
+    max-height: 100px;
+}
+.logoImg{
+    width:100%;
+    height: 100%;
+}
+
+.sectionCarrusel{
+    height: 75vh;
+    width: 100%;
+}
+
+.carruselimg {
+    max-height: 75vh;
+    /* max-width: 50vh; */
+}
+
+/* nosotros */
+
+.nosimg{
+    max-width: 500px;
+    max-height: 500px;
+}
+
+.card-group{
+    gap: 20px;
+    justify-content: center;
+}
+
+.card{
+    max-width: 300px;
+    max-height: 400px;
+}
+
+.card-img-top {
+    width: auto;
+    height: 200px;
+}
