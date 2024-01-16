@@ -8,11 +8,11 @@
 }
 
 body{
-  max-width: 1920px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
 
   background-image: url(../img/hero/background.jpg);
   background-repeat: no-repeat;
@@ -20,6 +20,7 @@ body{
   background-position: 50% 100%;
 }
 header{
+  max-width: 1920px;
   width: 100%;
   height: 100%;
   display: flex;
@@ -41,18 +42,19 @@ footer{
 
     border-top: 1px solid black;
 }
-.fotos{
+/* .fotos{
   background-image: url(../img/fotos/background.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 100%;
-}
+} */
 
 /* Estilos del nav */
 nav{
   display: flex;
 }
 .nav-links {
+  margin-left: 20px;
   list-style: none;
   display: flex;
 }
@@ -67,18 +69,18 @@ nav{
 .burger {
   display: none;
   cursor: pointer;
-}
-.bar1,.bar2,.bar3 {
-  width: 30px;
-  height: 3px;
-  background-color: #333;
-  margin: 6px 0;
-  transition: 0.4s;
+  z-index: 5;
+  
+  background-image: url(../img/iconos/menu-icon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
 
 /* Estilos para dispositivos pequeños (móviles) */
 @media only screen and (max-width: 768px) {
   .nav-links {
+    display: none;
     width: 100%;
     flex-direction: column;
     align-items: center;
@@ -92,7 +94,6 @@ nav{
   .nav-links li{
     width: 100%;
     padding: 10px;
-    border: 1px solid black;
   }
   .burger{
     display: flex;
@@ -103,7 +104,7 @@ nav{
 /* seccion Hero */
 .hero{
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
 
   display: flex;
   flex-direction: column;
@@ -220,6 +221,7 @@ h2{
   width: 300px;
   height: 90px;
   padding: 5px;
+  margin: 5px;
   border-radius: 25px;
 
   display: flex;
