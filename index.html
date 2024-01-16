@@ -4,80 +4,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="./assets/css/style.css">
+    
+    <link rel="stylesheet" href="./assets/css/position.css">
     <link rel="stylesheet" href="./assets/css/mq.css">
     <link rel="stylesheet" href="./assets/css/anim.css">
     <link rel="stylesheet" href="./assets/css/fonts.css">
     <link rel="stylesheet" href="./assets/css/js.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 
     <link rel="shortcut icon" href="./assets/img/logo.png" type="image/x-icon">
     <title>AG Trailers | Inicio</title>
 </head>
 <body>
-  <nav>
-    <a href="#"><img class="logo" src="./assets/img/logo.png" alt=""></a>
-    <ul class="nav-links">
-      <li><a href="#hero">Inicio</a></li>
-      <li><a href="#nosotros">nosotros</a></li>
-      <li><a href="#servicios">Servicios</a></li>
-      <li><a href="#">Contacto</a></li>
+  <nav class="w90 h10vh fx -r -w -j-s-b">
+    <a class="w20" href="#"><img class="logo w90 h100" src="./assets/img/logo.png" alt=""></a>
+    <ul class="ff24 nav-links w70 h100 fx-cr">
+      <li class="fx-bx "><a class="c-g-m-c" href="#hero">Inicio</a></li>
+      <li class="fx-bx "><a class="c-g-m-c" href="#nosotros">Nosotros</a></li>
+      <li class="fx-bx "><a class="c-g-m-c" href="#Trailers">Trailers</a></li>
+      <li class="fx-bx "><a class="c-g-m-c" href="#homologaciones">Homologaciones</a></li>
+      <li class="fx-bx "><a class="c-g-m-c" href="#SMecanico">Serv. Mecanico</a></li>
     </ul>
-    <div class="burger" onclick="toggleMenu()">
+    <div class="w10 h80 fx -c -j-c -a-c -a-c-c burger" onclick="toggleMenu()">
       <div class="bar1"></div>
       <div class="bar2"></div>
       <div class="bar3"></div>
     </div>
   </nav>
   <header>
-    <section id="hero" class="hero">
-      <div class="A1">
-        <img src="./assets/img/logo.png" alt="AG trailers Logo">
-        <div class="contTxt">
-          <h1 class="txtShadow" >AG Trailers</h1>
-          <h2 class="txtShadow">somos fabricantes de trailers, acoplados para autos, motos, con sistema basculante homologado para patentar, asegurar y circular de manera legal.</h2>
+    <section id="hero" class="hero effHero">
+      <div></div>
+      <div class="heroA1">
+        <img class="heroA1img" src="./assets/img/logo.png" alt="AG trailers Logo">
+        <div class="heroA1ContTxt">
+          <h1 class="roboto-medium-italic txtShadow" >AG Trailers</h1>
+          <h2 class="montserrat txtShadow">somos fabricantes de trailers, acoplados para autos, motos, con sistema basculante homologado para patentar, asegurar y circular de manera legal.</h2>
           <div class="heroAccion">
-            <a class="herobtn" href=""><img src="./assets/img/redes/maps.png" alt="google maps logo"> Ir</a>
-            <a class="herobtn" href=""><img src="./assets/img/redes/WhatsApp.webp" alt="whatsapp logo"> Contactarnos</a>
+            <a class="montserrat herobtn" href=""><img src="./assets/img/redes/maps.png" alt="google maps logo"><p>Ir</p></a>
+            <a class="montserrat herobtn" href=""><img src="./assets/img/redes/WhatsApp.webp" alt="whatsapp logo"><p>Contactarnos</p></a>
           </div>
         </div>
       </div>
       <div class="heroCardCont">
-        <div class="hc0 hc1">
-          <h3>Trailers</h3>
-        </div>
-        <div class="hc0 hc2">
-          <h3>Homologaciones</h3>
-        </div>
-        <div class="hc0 hc3">
-          <h3>Servicio mecanico</h3>
-        </div>
+        <a href="#Trailers"><div class="hc0 hc1"><h3 class="montserrat">Trailers</h3></div></a>
+        <a href="#homologaciones"><div class="hc0 hc2"><h3 class="montserrat">Homologaciones</h3></div></a>
+        <a href="#SMecanico"><div class="hc0 hc3"><h3 class="montserrat">Servicio mecanico</h3>
+        </div></a>
+
       </div>
       <div class="vMasCont">
-        <img src="./assets/img/arrow.png" alt="ver mas">
+        <a class="effInfintHero" href="#nosotros"><img src="./assets/img/arrow.png" alt="ver mas"></a>
       </div>
     </section>
-    <section id="nosotros" class="contUs">
-      <div class="cloudUs bxShadow">
-        <div class="cloudTxt">
+    <section id="nosotros" class="nosotrosCont">
+      <div class="nosotrosCloud">
+        <div class="nosotrosCloudCloudTxt">
+          <div class="nosotroscloudContTxt">
+            <div class="nosotroscloudContTxtTxt">
+              <h4 class="montserrat fontCenter">Sobre Nosotros</h4>
+              <p class="ff14 lato-regular">Diseño y fabricación de trailers/acoplados de todo tipo: para Vehículo, Cuatriciclo, Moto, Utv, Náutico, Grupo electrógeno, Maquina Vial, Agro, Food trailer, Mini Rodante, Obrador y Personalizado.</p>
+              <p class="ff14 lato-regular">Nuestros insumos 100% Nacionales generan confianza y seguridad, así mismo ofrecemos soluciones especificas para cada uno de nuestros clientes y para cada situación en particular.</p>
+              <p class="ff14 lato-regular">También brindamos asesoramiento personalizado y Servicio Post-venta avalando a nuestros productos con una completa garantía.</p>
+            </div>
+            <div class="cloudAccion">
+              <a class="btn" href=""><img class="icon" src="./assets/img/redes/WhatsApp.webp" alt="whatsapp logo"> Comunicarse</a>
+            </div>
+          </div>
           <div class="contRedes">
-            <a href=""><img src="./assets/img/redes/insta.png" alt="instagram logo"></a>
-            <a href=""><img src="./assets/img/redes/youtube.png" alt="youtube logo"></a>
-            <a href=""><img src="./assets/img/redes/maps.png" alt="google maps logo"></a>
-            <a href=""><img src="./assets/img/redes/WhatsApp.webp" alt="whatsapp logo"></a>
-          </div>
-          <div class="cloudMsj">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam quaerat velit ratione fugit commodi ipsum aliquid incidunt ut voluptas delectus modi sequi dignissimos voluptates repudiandae praesentium, ullam maxime magni. Velit fuga vel necessitatibus deserunt dolore suscipit a minima. Minima, ratione.</p>
+            <a class="effTransition effZoom" href=""><img class="icon" src="./assets/img/redes/insta.png" alt="instagram logo"></a>
+            <a class="effTransition effZoom" href=""><img class="icon" src="./assets/img/redes/youtube.png" alt="youtube logo"></a>
+            <a class="effTransition effZoom" href=""><img class="icon" src="./assets/img/redes/maps.png" alt="google maps logo"></a>
+            <a class="effTransition effZoom" href=""><img class="icon" src="./assets/img/redes/WhatsApp.webp" alt="whatsapp logo"></a>
           </div>
         </div>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3277.6655901590125!2d-58.29263882349716!3d-34.764015865982756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a32db18778af7b%3A0xf36aef86c538c275!2sAG-Trailers!5e0!3m2!1ses-419!2sar!4v1705203382066!5m2!1ses-419!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="nosotrosCloudcard">
+          <div class="nosotrosCloudcardcontent">
+            <div class="nosotrosCloudcardfront">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3277.6655901590125!2d-58.29263882349716!3d-34.764015865982756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a32db18778af7b%3A0xf36aef86c538c275!2sAG-Trailers!5e0!3m2!1ses-419!2sar!4v1705203382066!5m2!1ses-419!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="nosotrosCloudcardback">
+              <img class="nosotrosCloudcardfrontimg" src="./assets/img/nosotros/foto1.jpg" alt="">
+            </div>
+          </div>
+        </div>
       </div>
     </section>
-    <section id="servicios" class="servicios">
-      <div class="trailerCont">
-        <div class="trailerTxtCont">
-          <h3>Trailers</h4>
-          <p>Somos fabricamentes de trailers y acoplados homologados para patentar, asegurar y circular legalmente por la via publica. Acorde a la ley de transito y sistema de gestion de la calidad certificado bajo normas ISO 9001:2015</p>
-        </div>
+    <section id="Trailers" class="servicios">
+      <div class="serviciosTitle">
+        <h4 class="montserrat fontCenter ff40">Trailers</h4>
+        <p class="ff16 lato-regular">FABRICA DE TRAILERS Y ACOPLADOS HOMOLOGADOS CON LCM LICENCIA DE CONFIGURACIÓN DE MODELO</p>
+      </div>
+      <div class="serviciosContCard">
+        <!-- aca se renderizan las card por Js -->
+      </div>
+    </section>
+    <section class="fotos">
+      <div class="carrouselCont">
         <div class="carousel-container">
           <div id="carousel" class="carousel">
             <div class="carousel-item">
@@ -110,36 +132,43 @@
             </div>
           </div>
           <ul class="carousel-list">
-            <li onclick="changeImage(0)">👉 Autos livianos</li>
-            <li onclick="changeImage(1)">👉 Cuatriciclos</li>
-            <li onclick="changeImage(2)">👉 Motos</li>
-            <li onclick="changeImage(3)">👉 Huellas con sistema basculante</li>
-            <li onclick="changeImage(4)">👉 Piso enterizo de un eje</li>
-            <li onclick="changeImage(5)">👉 Piso enterizo doble eje</li>
-            <li onclick="changeImage(6)">👉 Piso enterizo con eje reforzado</li>
+            <li onclick="changeImage(0)"></li>
+            <li onclick="changeImage(1)"></li>
+            <li onclick="changeImage(2)"></li>
+            <li onclick="changeImage(3)"></li>
+            <li onclick="changeImage(4)"></li>
+            <li onclick="changeImage(5)"></li>
+            <li onclick="changeImage(6)"></li>
             <!-- Añade más elementos según sea necesario -->
           </ul>
         </div>
       </div>
-      <div class="homologacionesCont">
-        <h4>Homologaciones</h4>
-        <p>Nuestros productos tienen licencia de configuracion de modelo otorgado por el ministerio de industria de la nacion.</p>
-        <p>Aptos para patentar, asegurar y circular legalmente por la via publica acorde a la ley 24449</p>
-        <p>sistema de gestion de la calidad certificado bajo normas ISO 9001:2015</p>
-        <a href="">Realizamos reformas para homologaciones</a>
-      </div>
-      <div class="servicoMecanicoCont">
-        <h4>Servicio Mecanico</h4>
-        <p>excelente servicio post venta de nuestros trailers</p>
-        <p>Realizamos reparaciones</p>
-        <p>Realizamos puesta a punto</p>
-        <a href="">Comunicate</a>
-      </div>
+    </section>
+    <section id="homologaciones" class="w90 h40vh fx-bx">
+
+    </section>
+    <section id="SMecanico" class="w90 h40vh fx-bx">
+
     </section>
   </header>
-  <footer>
-    <h5>Modelo de muestra</h5>
+  <footer class="w100 h10vh fx-bx">
+    <div class="w30 h100">
+
+    </div>
+    <div class="w30 h100 fx-bx">
+      <h5>Modelo de muestra</h5>
+    </div>
+    <div class="w30 h100 fx-bx">
+      <div class="contRedes">
+        <a class="effTransition effZoom" href=""><img class="icon" src="./assets/img/redes/insta.png" alt="instagram logo"></a>
+        <a class="effTransition effZoom" href=""><img class="icon" src="./assets/img/redes/youtube.png" alt="youtube logo"></a>
+        <a class="effTransition effZoom" href=""><img class="icon" src="./assets/img/redes/maps.png" alt="google maps logo"></a>
+        <a class="effTransition effZoom" href=""><img class="icon" src="./assets/img/redes/WhatsApp.webp" alt="whatsapp logo"></a>
+      </div>
+    </div>
+    
   </footer>
   <script src="./main.js" type="module"></script>
 </body>
 </html>
+

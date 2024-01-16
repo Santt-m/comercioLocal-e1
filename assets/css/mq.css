@@ -2,46 +2,96 @@
 
 /* laptops */
 @media (max-width: 1440px){
-    
     /* Hero */
     .herobtn{
         font-size: 16px;
         min-width: 100px;
         padding-right: 15px;
     }
+}
+@media (max-width: 1024px){
     
-
-
 }
 /* tablets */
 @media (max-width: 790px){
-    /* nav */
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
-        position: absolute;
-        background-color: #333;
-    }
-    .nav-links.show {
-        display: flex;
-    }
-    .nav-links li {
-        margin: 0;
-    }
-    .burger {
-        display: block;
-    }
+
 
   /* hero */
+    h1{
+        font-size: 50px;
+    }
+    h2{
+        font-size: 16px;
+    }
+    .heroCardCont{
+        display: none;
+    }
+    .herobtn p{
+        display: none;
+    }
 
+    /* Nosotros */
+    .nosotrosCloud{
+        flex-direction: column;
+    }
+    .nosotrosCloudCloudTxt{
+        width: 100%;
+    }
+    .nosotrosCloudcard{
+        width: 80%;
+        height: 60%;
+    }
+    .nosotrosCloudcardfrontimg{
+        width: 40%;
+        height: 100%;
+    }
+    .cloudAccion{
+        display: none;
+    }
+    
+    
   /* cards */
     .cardLargas{
         width: 250px;
     }
 
+    /* section fotos */
+    .fotos{
+        width: 90%;
+    }
     .carousel{
         width: 100%;
+    }
+}
+
+/* Mobile */
+@media (max-width: 500px){
+    
+}
+@media (max-width: 320px){
+    H1{
+        display: flex;
+        font-size: 50px;
+    }
+    h2{
+        font-size: 20px;
+    }
+    .heroA1{
+        width: 80%;
+        height: 80%;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .heroA1img{
+        display: none;
+        animation: inleft 3s ease 0s 1 normal none;
+    }
+    .heroA1ContTxt{
+        width: 100%;
+    }
+    .vMasCont{
+        display: none;
     }
 }

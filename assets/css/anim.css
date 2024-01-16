@@ -1,6 +1,18 @@
 
 /* Animaciones */
+.effTransition{
+	transition: transform 1s ease;
+}
+.effZoom:hover{
+	transform: scale(1.2);
+}
 
+.effHero{
+	animation: hero 2s ease 0s 1 normal forwards;
+}
+.effInfintHero{
+	animation: hero 3s ease 5s infinite normal forwards;
+}
 /* boxs */
 .bxShadow{
     border: 1px solid #0000009d;
@@ -151,49 +163,14 @@
 }
 @keyframes txtShadow{
 	0% {
-		text-shadow: -5px 5px 10px #000000;
+		text-shadow: -5px 5px 7px #000000;
 	}
 
 	40% {
-		text-shadow: 5px 0px 14px #f10505;
+		text-shadow: 5px 0px 7px #f10505;
 	}
     100% {
-		text-shadow: 0px -5px 14px #0409f8;
-	}
-}
-@keyframes zoom {
-	0% {
-		transform: scale(1);
-	}
-	10% {
-		transform: scale(1.02);
-	}
-    20% {
-		transform: scale(1.04);
-	}
-    30% {
-		transform: scale(1.06);
-	}
-    40% {
-		transform: scale(1.09);
-	}
-    50% {
-		transform: scale(1.1);
-	}
-    60% {
-		transform: scale(1.09);
-	}
-    70% {
-		transform: scale(1.06);
-	}
-    80% {
-		transform: scale(1.04);
-	}
-    90% {
-		transform: scale(1.02);
-	}
-    100% {
-		transform: scale(1);
+		text-shadow: 0px -5px 7px #0409f8;
 	}
 }
 @keyframes bxShadow{

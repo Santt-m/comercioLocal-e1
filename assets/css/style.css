@@ -6,111 +6,114 @@
     text-decoration: none;
     list-style-type: none;
 }
+
 body{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
-nav {
-  width: 100%;
-  height: 10vh;
-  z-index: 1;
-  position: sticky;
-  top:0px;
-  overflow: hidden;
-
+  max-width: 1920px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
 
+  background-image: url(../img/hero/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0% 50%;
+}
 header{
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 main{
     width: 100%;
-    max-width: 1920px;
+
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     display: flex;
 }
-
 footer{
     width: 100%;
     height: 10vh;
+
+    border-top: 1px solid black;
 }
 
-/* NAV */
+/* Estilos del nav */
 
-.logo{
-    width: 100px;
-    height: 50px;
-}
 .nav-links {
-  width: 25%;  
-  background-color: white;
-  border-radius: 15px;
   list-style: none;
-  list-style-type: none;
-  margin-right: 10%;
-  padding: 10px;
-  overflow: hidden;
   display: flex;
-  gap: 5%;
 }
-.nav-links li {
-  padding: 5px;
-}
-nav a {
+
+.nav-links a {
   text-decoration: none;
-  color: rgb(128, 128, 128);
-  font-size: 18px;
-  font-weight: 400;
-
-  transition: all 1s ease-in-out;
-  position: relative;
-  text-transform: uppercase;
+  transition: color 0.5s ease;
 }
-nav a:hover {
-  transition: all 0.5s ease-in-out;
-  color: blue;
+.nav-links a:hover {
+  color: #333;
+  transition: color 0.5s ease;
 }
-
 .burger {
-    display: none;
-    cursor: pointer;
-    margin-right: 20px;
+  display: none;
+  cursor: pointer;
 }
-.bar1, .bar2, .bar3 {
-    width: 30px;
-    height: 3px;
-    background-color: #fff;
-    margin: 6px 0;
-    transition: 0.4s;
+
+/* Estilos para las barras del ícono de hamburguesa */
+.bar1,.bar2,.bar3 {
+  width: 30px;
+  height: 3px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
 }
+
+/* Estilos para dispositivos pequeños (móviles) */
+@media only screen and (max-width: 768px) {
+  .nav-links {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 10%;
+    left: 0;
+    padding: 10px;
+    background-color: #4e4e4eb0;
+  }
+  .nav-links li{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid black;
+  }
+  .burger{
+    display: flex;
+  }
+}
+
 
 /* seccion Hero */
 .hero{
   width: 100%;
-  height: 90vh;
+  height: 100vh;
 
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
-  gap: 1%;
-
-  animation: hero 2s ease 0s 1 normal forwards;
+  justify-content: space-around;
+  
+  background-image: url(../img//hero/img0.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 60% 110%;
 }
-.A1{
-  width: 100%;
-  height: 60%;
+.heroA1{
+  width: 90%;
+  height: 40%;
   
   display: flex;
   flex-direction: row;
@@ -118,21 +121,19 @@ nav a:hover {
   align-items: center;
   justify-content: center;
 
-  background-image: url(../img/hero/img1.jpeg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 20% 40%;
 }
-.A1 img{
-  width: 30%;
-  height: 60%;
+.heroA1img{
+  width: 50%;
+  height: 90%;
   animation: inleft 3s ease 0s 1 normal none;
 }
-.contTxt{
+.heroA1ContTxt{
   width: 50%;
-  height: 30%;
+  height: 80%;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   gap: 10%;
 
   animation: inright 3s ease 0s 1 normal none;
@@ -140,7 +141,7 @@ nav a:hover {
 
 /* botones */
 .heroAccion{
-  width: 50%;
+  width: 100%;
   height: 30%;
   display: flex;
   flex-direction: row;
@@ -151,8 +152,10 @@ nav a:hover {
   
 }
 .herobtn{
-  text-decoration: none;
-  min-width: 200px;
+  width: 30%;
+  max-width: 200px;
+  height: 100%;
+  max-height: 50px;
   padding: 5px;
   padding-right: 30px;
 
@@ -164,26 +167,29 @@ nav a:hover {
 
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 
   animation: inright 3s ease 0s 1 normal none;
+}
+.herobtn p{
+  margin-left: 10px;
 }
 .herobtn:hover{
   background-color: #002fff6b;
 }
 .herobtn img{
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
 
   animation: zoom 2s ease 0s 1 normal forwards;
 }
-
 h1{
   font-size: 60px;
-  color: rgba(28, 13, 163, 0.897);
+  color: white;
 }
 h2{
-  width: 75%;
+  min-height: 30%;
+  width: 100%;
   color: white;
   font-size: 20px;
 }
@@ -192,14 +198,14 @@ h2{
 
 .heroCardCont{
   width: 100%;
-  height: 30%;
+  height: 15%;
 
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 5%;
 
   filter: drop-shadow(10px 5px 17px #4e4e4e);
 
@@ -207,8 +213,8 @@ h2{
 }
 .hc0{
   width: 300px;
-  height: 100px;
-  padding: 10px;
+  height: 90px;
+  padding: 5px;
   border-radius: 25px;
 
   display: flex;
@@ -240,15 +246,23 @@ h2{
   background-position: 50% 80%
 }
 
-
 /* div ver mas */
 
 .vMasCont{
   width: 100%;
   
   display: flex;
-  flex-direction: row;
+  flex-direction:column;
   justify-content: center;
+  align-items: center;
+}
+.vMasCont a{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
 }
 .vMasCont img{
   width: 40px;
@@ -257,50 +271,99 @@ h2{
 
 /* section Us */
 
-.contUs{
+.nosotrosCont{
   width: 100%;
-  height: 30vh;
+  height: 50vh;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.cloudUs{
-  width: 80%;
-  height: 80%;
-  border-radius: 50px;
-  padding: 20px;
+.nosotrosCloud{
+  width: 90%;
+  min-height: 90%;
+
+  padding: 5px;
+  border-radius: 25px;
+
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  gap: 5%;
 }
-iframe{
+.nosotrosCloudCloudTxt{
   width: 70%;
   height: 90%;
-
-  border-radius: 25px;
-}
-.cloudtxt{
-  max-width: 30%;
-
   display: flex;
   flex-direction: column;
-  gap: 5%;
+  justify-content: space-between;
 }
-.cloudMsj{
+.nosotroscloudContTxt{
   width: 100%;
-
+  height: 80%;
+  padding: 5px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  align-items: center;
-
+  justify-content: space-between;
 }
-.cloudMsj p{
-  width: 75%;
+.nosotroscloudContTxtTxt{
+  width: 100%;
+  height: 75%;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.cloudAccion{
+  width: 100%;
+  height: 20%;
+  margin-top: 1% ;
+  display: flex;
+  justify-content: center;
+}
+.nosotrosCloudcard{
+  width: 50%;
+  height: 80%;
+}
+.nosotrosCloudcardfrontimg{
+  width: 100%;
+  height: 100%;
+}
+/* cloud cards */
+
+.nosotrosCloudcardcontent {
+  width: 100%;
+  height: 100%;
+
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+.nosotrosCloudcard:hover .nosotrosCloudcardcontent {
+  transform: rotateY( 180deg ) ;
+  transition: transform 0.5s;
+}
+.nosotrosCloudcardfront,.nosotrosCloudcardback {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: white;
+  backface-visibility: hidden;
+}
+.nosotrosCloudcardfront{
+  transform: rotateY( 0deg );
+}
+.nosotrosCloudcardback {
+  transform: rotateY( 180deg );
+  display: flex;
+  justify-content: center;
+}
+
+iframe{
+  width: 100%;
+  height: 100%;
+  background-color: #4e4e4e;
 }
 
 /* Redes */
@@ -313,120 +376,136 @@ iframe{
   justify-content: center;
   gap: 5%;
 }
-.contRedes img{
-  width: 25px;
-  height: 25px;
+.icon{
+  width: 30px;
+  height: 30px;
 }
 /* Section Servicios */
 
 .servicios {
-  width: 100%;
-  padding: 10px;
+  width: 90%;
   min-height: 90vh;
+  padding: 10px;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5%;
+
+}
+.serviciosTitle{
+  width: 100%;
+  height: 10%;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.serviciosContCard{
+  width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1%;
-
+  gap: 20px;
 }
 
-/* card trailer */
-.trailerCont {
-  max-width: 900px;
-  max-height: 600px;
-  padding: 30px;
-  border-radius: 25px;
-  border: 1px solid black;
+
+/* section Fotos */
+
+.fotos{
+  width: 70%;
+  height: 90vh;
 
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 1%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-.trailerTxtCont{
-  width: 100%;
-  padding: 20px;
-}
-/* Carousel */
 
+/* Carousel */
+.carrouselCont{
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+}
 .carousel-container {
   text-align: center;
   width: 100%;
+  height: 100%;
   padding: 5px;
+  border-radius: 25px;
 
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
-  gap: 5%;
+  justify-content: space-between;
 }
 .carousel {
-  width: 60%;
-  height: 100%;
+  width: 100%;
+  height: 95%;
   overflow: hidden;
-  padding: 5px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
 
-  background-color: #4e4e4e;
 
   border-radius: 25px;
 }
 .carousel-item {
   width: 100%;
-  height: 80%;
+  height: 100%;
   padding: 10px;
   border-radius: 25px;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
-
-  display: none;
 }
 .carousel-item img {
   width: 100%;
-  height: auto;
+  height: 90%;
   border-radius: 15px;
   display: block;
   margin: auto;
 }
 .carousel-item p {
+  display: none;
   width: 100%;
-  height: 20%;
+  height: 10%;
   padding: 10px;
-  color: white;
+  color: black;
 }
 .carousel-list {
-  width: 30%;
-  height: 100%;
-  padding: 5px;
+  width: 100%;
 
   list-style: none;
 
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 2%;
 
   border-radius: 25px;
 }
 .carousel-list li {
-  min-width: 80%;
-  padding: 10px;
+  max-width: 25px;
+  max-height: 25px;
+
+  padding: 3px;
   cursor: pointer;
   color: white;
   border-radius: 10px;
-  background-color: #4e4e4ea8;
+  background-color: rgb(56, 55, 55);
 
-  text-align: left;
+  text-align: center;
 }
 .carousel-list li:hover {
   color: black;
-  background-color: rgba(126, 78, 78, 0.747);
+  background-color: rgba(190, 233, 2, 0.747);
 }
 
 /* card homologaciones */
@@ -450,8 +529,22 @@ iframe{
 /* botones */
 
 .btn{
-  padding: 10px;
+  width: 100%;
+  max-width: 200px;
+  height: 100%;
+  max-height: 100px;
 
-  border: 1px solid yellow;
   border-radius: 10px;
+  background-color:#4e4e4e6c;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  transition: all 0.5s ease-in-out;
+}
+.btn:hover{
+  transition: all 0.5s ease-in-out;
+  background-color:#1422e26c;
+  color: rgb(0, 0, 0);
 }
