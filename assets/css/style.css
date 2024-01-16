@@ -17,7 +17,7 @@ body{
   background-image: url(../img/hero/background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 0% 50%;
+  background-position: 50% 100%;
 }
 header{
   width: 100%;
@@ -40,6 +40,12 @@ footer{
     height: 10vh;
 
     border-top: 1px solid black;
+}
+.fotos{
+  background-image: url(../img/fotos/background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 100%;
 }
 
 /* Estilos del nav */
