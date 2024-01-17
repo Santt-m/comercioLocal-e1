@@ -26,6 +26,11 @@ header{
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  background-image: url(../img/hero/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 100% 50%;
 }
 main{
     width: 100%;
