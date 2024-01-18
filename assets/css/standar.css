@@ -33,7 +33,7 @@
     
     --herobtnHover: rgba(57, 245, 20, 0.734); 
     --herobtnradiushover:25px;
-    --herobtnfontcolorhover:white;
+    --herobtnfontcolorhover:rgb(12, 12, 12);
 
     /* btn 2 */
     --btn2maxwhith: 200px;
@@ -102,7 +102,7 @@
 .y100{height: 100px;}
 
 /* btn hero */
-.btnhero { max-width: var(--herobtnmaxwhith); max-height: var(--herobtnmaxheigh); background-color: var(--herobtnbackgroundcolor); border: 2px solid var(--herobtnbordercolor); border-radius: var(--herobtnradius); font-family: var(--herobtnfont); color: var(--herobtnfontcolor); display: flex; flex-direction: row; align-items: center; justify-content: center; padding: 5px; }
+.btnhero { max-width: var(--herobtnmaxwhith); max-height: var(--herobtnmaxheigh); background-color: var(--herobtnbackgroundcolor); border: 2px solid var(--herobtnbordercolor); border-radius: var(--herobtnradius); font-family: var(--herobtnfont); color: var(--herobtnfontcolor); display: flex; flex-direction: row; align-items: center; justify-content: space-evenly; padding: 5px; }
 .btnhero:hover { background-color: var(--herobtnHover); border-radius: var(--herobtnradiushover); color: var(--herobtnfontcolorhover); }
 
 /* btn 2 */
