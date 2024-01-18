@@ -37,7 +37,7 @@ const renderProduct = (productName, productDescription, productImage) => {
             <div class="flip-card-front">
                 <img class="card-img" src="${productImage}" alt="${productName}">
                 <div class="productos-card-txt-info">
-                    <h4 class="montserrat fontCenter ff20">${productName}</h4>
+                    <h4 class="montserrat fontCenter ff16 fc">${productName}</h4>
                     <div class="productos-card-txt-info-accion">
                     <a class="cardBtn" href=""><img class="icon" src="./assets/img/redes/WhatsApp.webp" alt="whatsapp logo"> Comunicarse</a>
                 </div>

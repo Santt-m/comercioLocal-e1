@@ -38,9 +38,9 @@
 .h10vh{height:10vh;}
 .h5vh{height:5vh;}
 
-/* flex Box */
+.mt5{margin-top: 5px;}
+.mt10{margin-top: 10px;}
 
-/* Flex Box */
 
 /* Display Flex */
 .fx { display: flex; }
@@ -60,10 +60,9 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;}
-/* Flex Row */
+/* Flex Direction */
 .-r { flex-direction: row; }
 .-r-r { flex-direction: row-reverse; }
-/* Flex Column */
 .-c { flex-direction: column; }
 .-c-r { flex-direction: column-reverse; }
 /* Flex Wrap */
@@ -97,5 +96,5 @@
 /* padding */
 
 .p5{padding: 5px;}
-
+.p10{padding: 10px;}
 /*  */
