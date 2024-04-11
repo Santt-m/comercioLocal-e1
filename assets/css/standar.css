@@ -62,16 +62,16 @@
     --btn3bordercolorhover: violet;
 
     /* btn Accion */
-    --btnAccionmaxwhith: 180px;
+    --btnAccionmaxwhith: 200px;
     --btnAccionmaxheigh: 50px;
-    --btnAccionbackgroundcolor: #ff6600;
-    --btnAccionbordercolor: #cc3300;
+    --btnAccionbackgroundcolor: #050364;
+    --btnAccionbordercolor: #cc330000;
     --btnAccionradius: 10px;
     --btnAccionfont: 'Arial', sans-serif;
     --btnAccionfontcolor: white;
-    --btnAccionHover: #ff8533;
+    --btnAccionHover: #0044ff;
     --btnAccionradiushover: 8px;
-    --btnAccionfontcolorhover: white;
+    --btnAccionfontcolorhover: rgb(0, 0, 0);
 }
 
 
@@ -101,6 +101,8 @@
 .y90{height: 90px;}
 .y100{height: 100px;}
 
+.mt10{margin-top: 10px;}
+
 /* btn hero */
 .btnhero { max-width: var(--herobtnmaxwhith); max-height: var(--herobtnmaxheigh); background-color: var(--herobtnbackgroundcolor); border: 2px solid var(--herobtnbordercolor); border-radius: var(--herobtnradius); font-family: var(--herobtnfont); color: var(--herobtnfontcolor); display: flex; flex-direction: row; align-items: center; justify-content: space-evenly; padding: 5px; }
 .btnhero:hover { background-color: var(--herobtnHover); border-radius: var(--herobtnradiushover); color: var(--herobtnfontcolorhover); }
@@ -114,7 +116,7 @@
 .btn3:hover { background-color: var(--btn3Hover); border-radius: var(--btn3radiushover); color: var(--btn3fontcolorhover); border-color: var(--btn3bordercolorhover); }
 
 /* btn Accion */
-.btnAccion { max-width: var(--btnAccionmaxwhith); max-height: var(--btnAccionmaxheigh); background-color: var(--btnAccionbackgroundcolor); border: 1px solid var(--btnAccionbordercolor); border-radius: var(--btnAccionradius); font-family: var(--btnAccionfont); color: var(--btnAccionfontcolor); display: flex; flex-direction: row; align-items: center; justify-content: center; } 
+.btnAccion { max-width: var(--btnAccionmaxwhith); max-height: var(--btnAccionmaxheigh); background-color: var(--btnAccionbackgroundcolor); border: 1px solid var(--btnAccionbordercolor); border-radius: var(--btnAccionradius); font-family: var(--btnAccionfont); color: var(--btnAccionfontcolor); display: flex; flex-direction: row; align-items: center; justify-content: center;padding: 5px;} 
 .btnAccion:hover { background-color: var(--btnAccionHover); border-radius: var(--btnAccionradiushover); color: var(--btnAccionfontcolorhover); }
 
 

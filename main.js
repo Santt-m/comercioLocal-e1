@@ -1,278 +1,68 @@
-// import Js
-import "./assets/Js/script.js";
+import { products } from './assets/Js/products.js';
+import { renderProductCards, showProductDetails } from './assets/Js/renderProducts.js';
 
-// import funciones
+import { carouselItems } from './assets/Js/carrousel.js';
 
-import { sInit } from "./assets/Js/script.js";
-
-//Menu
-
-// Función para alternar la visibilidad del menú en dispositivos móviles
-function toggleMenu() {
-    const navLinks = document.querySelector('.nav-links');
-    navLinks.classList.toggle('show');
+// Función para leer el valor ID de la URL
+function getProductIdFromURL() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const productId = urlParams.get("id");
+    return productId ? parseInt(productId) : null;
 }
 
-// Evento de clic para el botón de hamburguesa
-document.querySelector('.burger').addEventListener('click', toggleMenu);
+// Ejecutar en todas las páginas para verificar la presencia de elementos con id
+document.addEventListener('DOMContentLoaded', function() {
+    const cardProductsDiv = document.getElementById('cardProducts');
+    const detailsProductsDiv = document.getElementById('detailProduct');
+    const carouselDiv = document.getElementById('carousel');
 
-// Evento de clic para cerrar el menú al hacer clic en un enlace
-document.querySelectorAll('.nav-links li a').forEach(link => {
-    link.addEventListener('click', () => {
-        const navLinks = document.querySelector('.nav-links');
-        navLinks.classList.remove('show');
+    // Verificar si hay una sección de productos para renderizar
+    if (cardProductsDiv) {
+        console.log("Card products div found. Rendering product cards...");
+        renderProductCards(products, cardProductsDiv);
+    }
+
+    // Verificar si hay una sección de detalles de productos para renderizar
+    if (detailsProductsDiv) {
+        console.log("Details product div found. Rendering product details...");
+        const productId = getProductIdFromURL();
+        if (productId) {
+            console.log("Product ID found in URL:", productId);
+            showProductDetails(productId, products, detailsProductsDiv);
+        } else {
+            console.log("No product ID found in URL. Rendering all product cards...");
+            renderProductCards(products, detailsProductsDiv);
+        }
+    }
+
+    // Verificar si hay un carrusel para renderizar
+    if (carouselDiv) {
+        console.log("Carousel div found. Rendering carousel...");
+        renderCarousel(carouselItems, carouselDiv);
+    }
+});
+
+// Función para renderizar el carrusel
+function renderCarousel(items, container) {
+    // Limpiar el contenedor
+    container.innerHTML = '';
+
+    // Crear elementos para cada elemento del carrusel
+    items.forEach(item => {
+        const carouselItem = document.createElement('div');
+        carouselItem.classList.add('carousel-item');
+
+        const image = document.createElement('img');
+        image.classList.add('bxShadow');
+        image.src = item.image;
+        image.alt = item.text;
+
+        const text = document.createElement('p');
+        text.textContent = item.text;
+
+        carouselItem.appendChild(image);
+        carouselItem.appendChild(text);
+
+        container.appendChild(carouselItem);
     });
-});
-
-
-// Servicios
-
-// Render de las cards
-
-const renderProduct = (productName, productDescription, productImage) => {
-    const cardElement = document.createElement('div');
-    cardElement.classList.add('productos-card');
-    cardElement.innerHTML = `
-        <div class="flip-card-inner">
-            <div class="flip-card-front">
-                <img class="card-img" src="${productImage}" alt="${productName}">
-                <div class="productos-card-txt-info">
-                    <h4 class="montserrat fontCenter ff16 fc">${productName}</h4>
-                    <div class="productos-card-txt-info-accion">
-                    <a class="cardBtn" href=""><img class="icon" src="./assets/img/redes/WhatsApp.webp" alt="whatsapp logo"> Comunicarse</a>
-                </div>
-                </div>
-            </div>
-            <div class="flip-card-back">
-                ${productDescription}
-                <div class="productos-card-txt-info-accion">
-                    <a class="cardBtn" href=""><img class="icon" src="./assets/img/redes/WhatsApp.webp" alt="whatsapp logo"> Comunicarse</a>
-                </div>
-            </div>
-        </div>
-    `;
-
-    // Obtén el contenedor de servicios y agrega la card al final
-    const serviciosContCard = document.querySelector('.serviciosContCard');
-    serviciosContCard.appendChild(cardElement);
-};
-
-// Datos de los productos
-
-const productsData = [
-    {
-        id: 0,
-        name: 'Trailers para autos 1/4 de milla/autos livianos',
-        description: `
-            <div class="productDescription">
-                <p>Detalles</p>
-                <ul>
-                    <li>• Llantas y cubiertas R14</li>
-                    <li>• Masas Peugeot</li>
-                    <li>• Instalación eléctrica completa con luces LED</li>
-                    <li>• Elásticos de 4 hojas</li>
-                    <li>• Guardabarros</li>
-                    <li>• Tortuga y cadenas</li>
-                    <li>• Bandas reflectivas</li>
-                    <li>• Paragolpes</li>
-                    <li>• Malacate manual</li>
-                    <li>• Color a elección</li>
-                </ul>
-                <p>✔️ Chasis y lanza fabricado con hierro IPN 80, rampas 40x30, huellas con chapa semilla de melón 2mm.</p>
-                <p>Medida estándar: 3700mm largo x 1700mm ancho + 1200mm lanza</p>
-                <p>✔️ También se realizan modelos a medida</p>
-            </div>
-        `,
-        image: './assets/img/servicios/Modelos/render/0.jpeg'
-    },
-    {
-        id: 1,
-        name: 'Trailer para cuatriciclo o 2 Motos',
-        description: `
-            <div class="productDescription">
-                <p>Detalles</p>
-                <ul>
-                    <li>• Llantas y cubiertas R14</li>
-                    <li>• Masas Fiat/Peugeot</li>
-                    <li>• Instalación eléctrica completa con luces LED</li>
-                    <li>• Elásticos de 3 hojas</li>
-                    <li>• Símbolo max 80</li>
-                    <li>• Tortuga y cadenas</li>
-                    <li>• Bandas reflectivas</li>
-                    <li>• Color a elección</li>
-                </ul>
-                <p>✔️ Chasis y lanza fabricado con hierro UPN 60 piso chapa de melón 2MM, rampas con caño 25x25</p>
-                <p>▪️ Capacidad carga: 800 kg</p>
-                <p>Medida estándar: 2200mm x 1300mm</p>
-                <p>✔️ También se realizan a medida</p>
-            </div>
-        `,
-        image: './assets/img/servicios/Modelos/render/1.jpeg'
-    },
-    {
-        id: 2,
-        name: 'Trailer para 3 motos',
-        description: `
-            <div class="productDescription">
-                <p>Detalles</p>
-                <ul>
-                    <li>• Llantas y cubiertas R14</li>
-                    <li>• Masas Fiat/Peugeot</li>
-                    <li>• Instalación eléctrica completa con luces LED</li>
-                    <li>• Elásticos de 3 hojas</li>
-                    <li>• Guardabarros</li>
-                    <li>• Tortuga y cadenas</li>
-                    <li>• Bandas reflectivas</li>
-                    <li>• Paragolpes</li>
-                    <li>• Color a elección</li>
-                </ul>
-                <p>✔️ Chasis y lanza fabricado con hierro UPN 60, rampas 25x25, piso con chapa semilla de melón 2mm.</p>
-                <p>Medida estándar: 2200mm largo x 1700mm ancho + 1200mm lanza.</p>
-                <p>Capacidad de carga: 800 kg</p>
-                <p>✔️ También se realizan modelos a medida</p>
-            </div>
-        `,
-        image: './assets/img/servicios/Modelos/render/2.jpeg'
-    },
-    {
-        id: 3,
-        name: 'Trailer con huellas y Sistema Basculante',
-        description: `
-            <div class="productDescription">
-                <p>Detalles</p>
-                <ul>
-                    <li>• Llantas y cubiertas R14</li>
-                    <li>• Masas Peugeot</li>
-                    <li>• Instalación eléctrica completa con luces LED</li>
-                    <li>• Elásticos de 4 hojas</li>
-                    <li>• Guardabarros</li>
-                    <li>• Tortuga y cadenas</li>
-                    <li>• Bandas reflectivas</li>
-                    <li>• Paragolpes</li>
-                    <li>• Malacate manual</li>
-                    <li>• Color a elección</li>
-                </ul>
-                <p>✔️ Chasis y lanza fabricado con hierro IPN 80, rampas 40x30, huellas con chapa semilla de melón 2mm.</p>
-                <p>Medida estándar: 3700mm largo x 1700mm ancho + 1200mm lanza</p>
-                <p>Capacidad de carga: 1200 kg</p>
-                <p>✔️ También se realizan modelos a medida</p>
-            </div>
-        `,
-        image: './assets/img/servicios/Modelos/render/3.jpeg'
-    },
-    {
-        id: 4,
-        name: 'Trailer piso enterizo doble eje',
-        description: `
-            <div class="productDescription">
-                <p>Detalles</p>
-                <ul>
-                    <li>• Llantas y cubiertas R14</li>
-                    <li>• Masas Fiat/Peugeot</li>
-                    <li>• Instalación eléctrica completa con luces LED</li>
-                    <li>• Elásticos de 4 hojas</li>
-                    <li>• Guardabarros</li>
-                    <li>• Tortuga y cadenas</li>
-                    <li>• Bandas reflectivas</li>
-                    <li>• Paragolpe</li>
-                    <li>• Malacate manual</li>
-                    <li>• Color a elección</li>
-                </ul>
-                <p>✔️ Chasis y lanza fabricado con hierro IPN 80, rampas 40x30, piso con chapa semilla de melón 3/4mm.</p>
-                <p>Medida estándar: 5000mm largo x 1900mm ancho + 1200mm lanza</p>
-                <p>Capacidad de carga: 2.000 kg</p>
-                <p>✔️ Se realizan modelos a medida</p>
-            </div>
-        `,
-        image: './assets/img/servicios/Modelos/render/4.jpeg'
-    },
-    {
-        id: 5,
-        name: 'Trailer piso enterizo con eje reforzado',
-        description: `
-            <div class="productDescription">
-                <p>Detalles</p>
-                <ul>
-                    <li>• Llantas y cubiertas R15</li>
-                    <li>• Masas F100/Toyota</li>
-                    <li>• Instalación eléctrica completa con luces LED</li>
-                    <li>• Elásticos de 5 hojas</li>
-                    <li>• Guardabarros</li>
-                    <li>• Tortuga y cadenas</li>
-                    <li>• Bandas reflectivas</li>
-                    <li>• Paragolpes</li>
-                    <li>• Malacate manual</li>
-                    <li>• Color a elección</li>
-                </ul>
-                <p>✔️ Chasis y lanza fabricado con hierro IPN 80, rampas 40x30, piso con chapa semilla de melón 3,2mm.</p>
-                <p>Medida estándar: 4500mm largo x 2000mm ancho + 1200mm lanza</p>
-                <p>Capacidad de carga: 1800 kg</p>
-                <p>✔️ Se realizan modelos a medida</p>
-            </div>
-        `,
-        image: './assets/img/servicios/Modelos/render/5.jpeg'
-    },
-    {
-        id: 6,
-        name: 'Trailer piso enterizo de un eje',
-        description: `
-            <div class="productDescription">
-                <p>Detalles</p>
-                <ul>
-                    <li>• Llantas y cubiertas R14</li>
-                    <li>• Masas Fiat/Peugeot</li>
-                    <li>• Instalación eléctrica completa con luces LED</li>
-                    <li>• Elásticos de 5 hojas</li>
-                    <li>• Guardabarros</li>
-                    <li>• Tortuga y cadenas</li>
-                    <li>• Bandas reflectivas</li>
-                    <li>• Paragolpes</li>
-                    <li>• Malacate manual</li>
-                    <li>• Color a elección</li>
-                </ul>
-                <p>✔️ Chasis y lanza fabricado con hierro IPN 80, rampas 40x30, piso con chapa semilla de melón 2mm.</p>
-                <p>Medida estándar: 3700mm largo x 1700mm ancho + 1200mm lanza</p>
-                <p>Capacidad de carga: 1200 kg</p>
-                <p>✔️ Se realizan modelos a medida</p>
-            </div>
-        `,
-        image: './assets/img/servicios/Modelos/render/6.jpeg'
-    },
-    {
-        id: 7,
-        name: 'Trailer para 2 cuatriciclos o 3 motos',
-        description: `
-            <div class="productDescription">
-                <p>Detalles</p>
-                <ul>
-                    <li>• Llantas y cubiertas R14</li>
-                    <li>• Masas Fiat/Peugeot</li>
-                    <li>• Instalación eléctrica completa con luces LED</li>
-                    <li>• Elásticos de 3 hojas</li>
-                    <li>• Símbolo max 80</li>
-                    <li>• Tortuga y cadenas</li>
-                    <li>• Bandas reflectivas</li>
-                    <li>• Color a elección</li>
-                </ul>
-                <p>✔️ Chasis y lanza fabricado con hierro UPN 60, piso chapa de melón 2MM, rampas con caño 25x25</p>
-                <p>Medidas: 4000mm x 1300mm</p>
-                <p>Capacidad de carga: 800 kg</p>
-            </div>
-        `,
-        image: './assets/img/servicios/Modelos/render/7.jpeg'
-    },
-    // ... más productos
-];
-
-// Llama a la función renderProduct para cada producto
-productsData.forEach(product => {
-    renderProduct(product.name, product.description, product.image);
-});
-
-
-const init = () => {
-
-    sInit();
-};
-
-init ();
+}
