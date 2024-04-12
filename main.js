@@ -1,7 +1,6 @@
 import { products } from './assets/Js/products.js';
 import { renderProductCards, showProductDetails } from './assets/Js/renderProducts.js';
-
-import { carouselItems } from './assets/Js/carrousel.js';
+import { carouselItems, initCarousel as initCarouselFunction, nextImage, prevImage } from './assets/Js/carrousel.js'; // Usar un alias para initCarousel
 
 // Función para leer el valor ID de la URL
 function getProductIdFromURL() {
@@ -23,6 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Verificar si hay una sección de detalles de productos para renderizar
+    
     if (detailsProductsDiv) {
         console.log("Details product div found. Rendering product details...");
         const productId = getProductIdFromURL();
@@ -38,31 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Verificar si hay un carrusel para renderizar
     if (carouselDiv) {
         console.log("Carousel div found. Rendering carousel...");
-        renderCarousel(carouselItems, carouselDiv);
+        initCarouselFunction(carouselDiv); // Llamar a la función de inicialización con el alias
     }
 });
-
-// Función para renderizar el carrusel
-function renderCarousel(items, container) {
-    // Limpiar el contenedor
-    container.innerHTML = '';
-
-    // Crear elementos para cada elemento del carrusel
-    items.forEach(item => {
-        const carouselItem = document.createElement('div');
-        carouselItem.classList.add('carousel-item');
-
-        const image = document.createElement('img');
-        image.classList.add('bxShadow');
-        image.src = item.image;
-        image.alt = item.text;
-
-        const text = document.createElement('p');
-        text.textContent = item.text;
-
-        carouselItem.appendChild(image);
-        carouselItem.appendChild(text);
-
-        container.appendChild(carouselItem);
-    });
-}
+window.addEventListener('DOMContentLoaded', initCarousel);

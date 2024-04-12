@@ -1,7 +1,7 @@
 :root{
   /* Navbar */
   --navbarbackgroundcolor: rgb(29, 43, 83);
-  --navbarbackgroundcolorhover:rgba(128, 128, 128, 0.61);
+  --navbarbackgroundcolorhover:rgba(37, 82, 150, 0.61);
   
   --navbartextColor:white;
   --navbartextColorhover:white;
@@ -73,6 +73,7 @@ nav img{
 .nav-links a {
   height: 100%;
   width: 100%;
+  padding: 5px;
   color: var(--navbartextColor);
   font-weight: bold;
   text-decoration: none;
@@ -130,7 +131,7 @@ nav img{
 
 /* seccion Hero */
 .hero{
-  background-image: url(../img//hero/img0.png);
+  /* background-image: url(../img/hero/img0.png); */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 95%;
@@ -140,6 +141,13 @@ h1{
 }
 h2{
   -webkit-text-stroke: 0.8px #333;
+}
+.triangulo-fondo-clip-path {
+  width: 100%;
+  height: 200px;
+  background-image: url(../img/hero/img0.png);
+  -webkit-clip-path: polygon(0 7px, 100px 7px, 105px 0px, 100% 0px, 100% 100%, 0 100%);
+  clip-path: polygon(0 7px, 100px 7px, 105px 0px, 100% 0px, 100% 100%, 0 100%);
 }
 
 /* hero cards */
@@ -324,28 +332,24 @@ iframe{
   margin-top: 5px; /* Espacio entre la imagen y el texto */
 }
 
-/* Controles del carrusel */
-.carousel-controls {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
 }
 
-.carousel-controls button {
-  background-color: #ffffff;
-  border: 1px solid #000000;
-  color: #000000;
-  padding: 5px 10px;
+.carousel-indicator {
+  width: 10px;
+  height: 10px;
+  background-color: #bbb;
+  border-radius: 50%;
   margin: 0 5px;
   cursor: pointer;
 }
 
-.carousel-controls button:hover {
-  background-color: #000000;
-  color: #ffffff;
+.carousel-indicator.active {
+  background-color: #333;
 }
-
 
 
 
