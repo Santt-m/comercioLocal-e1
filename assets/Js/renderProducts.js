@@ -42,8 +42,8 @@ function renderProductDetails(product, container) {
 
     productElement.innerHTML = `
         <h2 class="w100 fc p10">${product.name}</h2>
-        <div class="product-info">
-            <div class="fx -c a768-r a768-a-c">
+        <div class="product-info w100 fx -c">
+            <div class="w 100 fx -c a768-r a768-j-s a768-a-c">
                 <img class="w90 a768w30" src="${product.image}" alt="${product.name}">
                 <div class="p10">
                     <h3 class= "roboto-regular ff14">Características:</h3>
@@ -52,7 +52,7 @@ function renderProductDetails(product, container) {
                     </div>
                 </div>
             </div>
-            <div class="fx -c a768-r a768-j-s-a a768-a-c">
+            <div class="fx -c a768-r a768-j-s a768-a-c">
                 <img class="w90 a768w30" src="${product.imageb}" alt="${product.name}">
                 <div class="p10 ff12 roboto-regular">
                     ${product.texto}

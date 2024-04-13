@@ -16,16 +16,20 @@
     <title>AG Trailers | Inicio</title>
 </head>
 <body>
-  <nav class="w100 h10vh -r -w -a-c -j-s-a">
-    <a class="h90 fx -a-c -j-c" href="#"><img class="x100 y50" src="./assets/img/logo.png" alt=""></a>
-    <ul class="w50 h100 ff12 fc nav-links fx -c -a-c -j-c gap5 a768-r a768-j-e">
+  <nav class="navbar">
+    <a class="logo" href="#"><img class="x100 y50" src="./assets/img/logo.png" alt=""></a>
+    <ul class="nav">
       <li><a class="roboto-regular" href="#hero">Inicio</a></li>
       <li><a class="roboto-regular" href="#nosotros">Nosotros</a></li>
-      <li><a class="roboto-regular" href="#Trailers">Trailers</a></li>
+      <li><a class="roboto-regular" href="./trailers.html">Trailers</a></li>
       <li><a class="roboto-regular" href="#homologaciones">Homologaciones</a></li>
       <li><a class="roboto-regular fil" href="#SMecanico">Serv. Mecanico</a></li>
     </ul>
-    <div class="w10 h90 -c -j-c -a-c -a-c-c burger"></div>
+    <div class="burger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
   </nav>
   <header>
     <section id="hero" class="hero w100 h90vh fx -c -w -a-c -j-s-b triangulo-fondo-clip-path">
@@ -52,19 +56,13 @@
       <div class="w90 h90 p5 fx -c -a-c gap5 a768-r a768-a-c a768-j-c">
         <div class="txt w100 h100 fx -c -a-c -j-s-b a768w90">
           <div class="w100 h80 fx -c -j-s-b -a-c ">
-            <div class="w100 h100 fx -c -j-s-b -a-c">
+            <div class="w100 h100 fx -c -j-s-b -a-c p10">
               <h4 class="montserrat fc ff20">Sobre Nosotros</h4>
               <p class="ff14 lato-regular">Diseñamos y fabricamos de trailers: para Vehículo, Cuatriciclo, Moto, Utv, Náutico, Grupo electrógeno, Maquina Vial, Agro, Food trailer, Mini Rodante, Obrador y Personalizado.</p>
               <p class="ff14 lato-regular">Nuestros insumos 100% Nacionales generan confianza y seguridad, así mismo ofrecemos soluciones especificas para cada uno de nuestros clientes y para cada situación en particular.</p>
               <p class="ff14 lato-regular">También brindamos asesoramiento personalizado y Servicio Post-venta avalando a nuestros productos con una completa garantía.</p>
               <a class="btn2 w100 p5" href=""><img class="icon" src="./assets/img/redes/WhatsApp.webp" alt="whatsapp logo"><p class="dnone a768fx">whatsapp</p></a>
             </div>
-          </div>
-          <div class="redes w100 h10 fx -a-i -j-c gap5 mt10">
-            <a class="effTransition effZoom" href=""><img class="icon" src="./assets/img/redes/insta.png" alt="instagram logo"></a>
-            <a class="effTransition effZoom" href=""><img class="icon" src="./assets/img/redes/youtube.png" alt="youtube logo"></a>
-            <a class="effTransition effZoom" href=""><img class="icon" src="./assets/img/redes/maps.png" alt="google maps logo"></a>
-            <a class="effTransition effZoom" href=""><img class="icon" src="./assets/img/redes/WhatsApp.webp" alt="whatsapp logo"></a>
           </div>
         </div>
         <div class="card w70 h40 a768h70">
@@ -88,13 +86,15 @@
         <!-- aca se renderizan las card por Js -->
       </div>
     </section>
-
-    <section class="carousel-container w100 h40vh p10">
-      <div id="carousel" class="carousel w100 h100">
-          <!-- El contenido del carrusel se generará dinámicamente con JavaScript -->
+    <section class="w100 fx -c -a-c">
+      <div id="carousel" class="w90 fx -r-r -w -j-c">
+        <!-- aca se renderizan por js un div contenedor de otros divs con unas imagenes para el carusel-->
       </div>
-  </section>
-  
+      <div id="carousel-controls" class="carousel-controls w100 fx -r -w -a-c -j-c" >
+        <!-- aca se renderizan por js un div contenedor de botones para el carusel--> 
+      </div>
+    </section>
+    
     <section id="homologaciones" class="w90 h40vh fx-bx">
     </section>
     <section id="SMecanico" class="w90 h40vh fx-bx">

@@ -1,9 +1,3 @@
-.show{
-    z-index: 1;
-    display: flex;
-}
-
-
 /* Servicios */
 
 /* Cards */
@@ -45,11 +39,6 @@
     margin-bottom: 5px;
 }
 
-
-
-
-
-
 /* Accion de la card */
 .cardBtn{
     width: 50%;
@@ -82,4 +71,11 @@
     padding: 20px;
     font-size: 16px;
     
+}
+
+
+/* renderproducts.js */
+
+.product-info{
+    gap: 20px;
 }

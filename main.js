@@ -1,7 +1,6 @@
 import { products } from './assets/Js/products.js';
 import { renderProductCards, showProductDetails } from './assets/Js/renderProducts.js';
-import { carouselItems, initCarousel as initCarouselFunction, nextImage, prevImage } from './assets/Js/carrousel.js'; // Usar un alias para initCarousel
-
+import {initializeCarousel} from './assets/Js/carrousel.js';
 // Función para leer el valor ID de la URL
 function getProductIdFromURL() {
     const urlParams = new URLSearchParams(window.location.search);
@@ -13,16 +12,23 @@ function getProductIdFromURL() {
 document.addEventListener('DOMContentLoaded', function() {
     const cardProductsDiv = document.getElementById('cardProducts');
     const detailsProductsDiv = document.getElementById('detailProduct');
-    const carouselDiv = document.getElementById('carousel');
 
-    // Verificar si hay una sección de productos para renderizar
+// NavBar
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.nav');
+
+    burger.addEventListener('click', function() {
+    nav.classList.toggle('nav-active');
+    });
+
+    // busca un div con id cardProducts
     if (cardProductsDiv) {
         console.log("Card products div found. Rendering product cards...");
         renderProductCards(products, cardProductsDiv);
     }
 
-    // Verificar si hay una sección de detalles de productos para renderizar
-    
+    // busca un div con id detailProduct (para trailers.html)
+    // busca un id en la url para mostrar los detalles automaticamente
     if (detailsProductsDiv) {
         console.log("Details product div found. Rendering product details...");
         const productId = getProductIdFromURL();
@@ -35,10 +41,4 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Verificar si hay un carrusel para renderizar
-    if (carouselDiv) {
-        console.log("Carousel div found. Rendering carousel...");
-        initCarouselFunction(carouselDiv); // Llamar a la función de inicialización con el alias
-    }
 });
-window.addEventListener('DOMContentLoaded', initCarousel);
