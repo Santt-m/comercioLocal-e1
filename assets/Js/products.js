@@ -51,6 +51,12 @@ const products = [
             <p>Medida estándar: 2200mm x 1300mm</p>
             <p>✔️ También se realizan a medida</p>
         `,
+        carousel: [
+            './assets/img/carrousel/carrousel1/0a.jpeg',
+            './assets/img/carrousel/carrousel1/0b.jpeg',
+            './assets/img/carrousel/carrousel1/0c.jpeg',
+            './assets/img/carrousel/carrousel1/0d.jpeg',
+        ],
     },
     {
         id: 2,

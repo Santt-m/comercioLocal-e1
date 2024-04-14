@@ -17,7 +17,7 @@
 </head>
 <body>
   <nav class="navbar">
-    <a class="logo" href="#"><img class="x100 y50" src="./assets/img/logo.png" alt=""></a>
+    <a class="logo" href="#"><img class="x100 y70" src="./assets/img/logo.png" alt=""></a>
     <ul class="nav">
       <li><a class="roboto-regular" href="#hero">Inicio</a></li>
       <li><a class="roboto-regular" href="#nosotros">Nosotros</a></li>
@@ -32,14 +32,14 @@
     </div>
   </nav>
   <header>
-    <section id="hero" class="hero w100 h90vh fx -c -w -a-c -j-s-b triangulo-fondo-clip-path">
+    <section id="hero" class="hero w100 h90vh fx -c -w -a-c -j-s-b effHero">
       <div class="w80 h70 fx-bx -j-c-b ">
-        <div class="w100 h50 fx-bx gap5">
-          <h1 class="w100 h20 fc ff40" >AG Trailers</h1>
-          <h2 class="w100 h50 fc ff20 -a-c fx montserrat">somos fabricantes de trailers, acoplados para autos, motos, con sistema basculante homologado para patentar, asegurar y circular de manera legal.</h2>
-          <div class="w100 h20 p5 fx -r -w -a-c -j-c gap5  montserrat">
-            <a class="btnhero w20" href=""><img class="x20 y20" src="./assets/img/redes/maps.png" alt="google maps logo"><p class="dnone a768fx">Ir</p></a>
-            <a class=" btnhero w20" href=""><img class="x20 y20" src="./assets/img/redes/WhatsApp.webp" alt="whatsapp logo"><p class="dnone a768fx">Whatsapp</p></a>
+        <div class="w100 h50 fx -c -r gap5 fff">
+          <h1 class="w100 h20 fc ff40 " >AG Trailers</h1>
+          <h2 class="w100 h50 fc ff20 -a-c fx roboto-bold">somos fabricantes de trailers, acoplados para autos, motos, con sistema basculante homologado para patentar, asegurar y circular de manera legal.</h2>
+          <div class="w100 h30 p5 fx -r -w -a-c -j-c gap5  montserrat">
+            <a class="btnhero" href=""><img class="x20 y20" src="./assets/img/redes/maps.png" alt="google maps logo"><p class="dnone a768fx">Ir</p></a>
+            <a class=" btnhero" href=""><img class="x20 y20" src="./assets/img/redes/WhatsApp.webp" alt="whatsapp logo"><p class="dnone a768fx">Whatsapp</p></a>
           </div>
         </div>
       </div>
@@ -94,26 +94,46 @@
         <!-- aca se renderizan por js un div contenedor de botones para el carusel--> 
       </div>
     </section>
-    
-    <section id="homologaciones" class="w90 h40vh fx-bx">
+    <section id="homologaciones" class="homologaciones w90 h40vh fx -c -a-c -j-s-b a768-r ">
+      <div class="w100 h50 a768w50 ml25 fx -c -a-c -j-c gap5">
+        <h4 class="montserrat fontCenter ff22">Homologaciones</h4>
+        <p class="ff16 lato-regular">ACOPLADOS HOMOLOGADOS CON LCM LICENCIA DE CONFIGURACIÓN DE MODELO</p>
+        <a class="btn2 fc p5" href=""><img class="icon" src="./assets/img/redes/WhatsApp.webp" alt="whatsapp logo">Quiero la homologacion</a>
+      </div>
+      <div class="w100 h100 a768w40 fx -c -a-c -j-c">
+        <div id="homologacionesCarousel" class="w50 h50 fx"></div>
+      </div>
     </section>
-    <section id="SMecanico" class="w90 h40vh fx-bx">
+    <section id="SMecanico" class=" w90 h60vh fx -c -a-c -j-s-b a768-r ">
+      <div class="w50 a768w40 fx -c -a-c -j-c">
+        <img class="servMImg" src="./assets/img/serv-mecanico/servMecanicoCarousel/0a.png" alt="imagen servicio mecanico">
+      </div>
+      <div class="w100 h100 a768w40 fx -c -a-c -j-c gap5">
+        <h4>Servicio Mecanico</h4>
+        <p class="ff16 lato-regular">Servicio mecanico de trailers</p>
+        <a class="btn2 fc p5" href=""><img class="icon" src="./assets/img/redes/WhatsApp.webp" alt="whatsapp logo">Quiero el Servicio Mecanico</a>
+      </div>
     </section>
   </header>
-  <footer class="w100 h10vh fx-bx">
+  <footer class="w100 h10vh fx -r -j-s-b -a-c p10">
+    <div class="w30 h90 fx -c gap5">
+      <h5>AG Trailers</h5>
+      <p>Fabrica de Trailers</p>
+      <p>Dr. Luis Agote 4047, Quilmes Oeste, Provincia de Buenos Aires</p>
+      <a href="tel:+541130139929">+541130139929</a>
+      <img class="x50 y50" src="./assets/img/footer/datafiscal.jpg" alt="">
+    </div>
     <div class="w30 h100">
-
+      <p>Indice</p>
+      <ul>
+        <li><a href="./index.html">Inicio</a></li>
+        <li><a href="./trailers.html">Trailers</a></li>
+        <li><a href="./nosotros.html">Nosotros</a></li>
+      </ul>
     </div>
     <div class="w30 h100 fx-bx">
       <h5>Modelo de muestra</h5>
-    </div>
-    <div class="w30 h100 fx-bx">
-      <div class="contRedes">
-        <a class="effTransition effZoom" href=""><img class="icon" src="./assets/img/redes/insta.png" alt="instagram logo"></a>
-        <a class="effTransition effZoom" href=""><img class="icon" src="./assets/img/redes/youtube.png" alt="youtube logo"></a>
-        <a class="effTransition effZoom" href=""><img class="icon" src="./assets/img/redes/maps.png" alt="google maps logo"></a>
-        <a class="effTransition effZoom" href=""><img class="icon" src="./assets/img/redes/WhatsApp.webp" alt="whatsapp logo"></a>
-      </div>
+      <p>by Santt</p>
     </div>
     
   </footer>

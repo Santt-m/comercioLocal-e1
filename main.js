@@ -1,6 +1,7 @@
 import { products } from './assets/Js/products.js';
 import { renderProductCards, showProductDetails } from './assets/Js/renderProducts.js';
 import {initializeCarousel} from './assets/Js/carrousel.js';
+import { initializeHomologacionesCarousel } from './assets/Js/homologacionesCarousel.js';
 // Función para leer el valor ID de la URL
 function getProductIdFromURL() {
     const urlParams = new URLSearchParams(window.location.search);
@@ -40,5 +41,4 @@ document.addEventListener('DOMContentLoaded', function() {
             renderProductCards(products, detailsProductsDiv);
         }
     }
-
 });

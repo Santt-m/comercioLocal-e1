@@ -1,15 +1,15 @@
 const carouselItems = [
-    { image: './assets/img/carrousel/carrousel1/0a.jpeg', text: 'Autos livianos' },
-    { image: './assets/img/carrousel/carrousel1/0b.jpeg', text: 'Cuatriciclos' },
-    { image: './assets/img/carrousel/carrousel1/0c.jpeg', text: 'Motos' },
-    { image: './assets/img/carrousel/carrousel1/0d.jpeg', text: 'Huellas con sistema basculante' },
-    { image: './assets/img/carrousel/carrousel1/0e.jpeg', text: 'Piso enterizo de un eje' },
-    { image: './assets/img/carrousel/carrousel1/0f.jpeg', text: 'Piso enterizo doble eje' },
-    { image: './assets/img/carrousel/carrousel1/0g.jpeg', text: 'Piso enterizo con eje reforzado' }
+    { image: './assets/img/carrousel/carrousel1/0a.jpeg', text: 'Trailers para autos 1/4 de milla/autos livianos' },
+    { image: './assets/img/carrousel/carrousel1/0b.jpeg', text: 'Trailer para cuatriciclo o 2 Motos' },
+    { image: './assets/img/carrousel/carrousel1/0c.jpg', text: 'Trailer para 3 motos' },
+    { image: './assets/img/carrousel/carrousel1/0d.jpg', text: 'Trailer con huellas y Sistema Basculante' },
+    { image: './assets/img/carrousel/carrousel1/0e.jpg', text: 'Trailer piso enterizo doble eje' },
+    { image: './assets/img/carrousel/carrousel1/0f.jpg', text: 'Trailer piso enterizo con eje reforzado' },
+    { image: './assets/img/carrousel/carrousel1/0g.jpg', text: 'Trailer para 2 cuatriciclos o 3 motos' }
 ];
 
 let currentIndex = 0;
-const intervalTime = 3000; // Cambiar cada 3 segundos
+const intervalTime = 5000; // reloj de intervalo para cambiar la imagen de carousel
 
 export function initializeCarousel() {
   const carouselContainer = document.getElementById('carousel');
@@ -83,3 +83,5 @@ function updateButtonStates() {
 document.addEventListener('DOMContentLoaded', () => {
   initializeCarousel();
 });
+
+// codigo para el carousel de trailers.html

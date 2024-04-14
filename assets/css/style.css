@@ -60,7 +60,6 @@ footer{
     border-top: 1px solid black;
 }
 
-
 /* Navbar */
 .navbar {
   width: 100%;
@@ -102,18 +101,23 @@ footer{
   position: relative;
   top: 0;
   left: 0;
-  z-index: 1;
   display: none;
+
+  transition: padding 0.3s, width 0.3s;
 }
+.navbar.nav-pequeno {
+  width: 5vh; /* Ancho reducido */
+}
+
+
 /* Esto es lo que se tiene que activar por js cuando la pantalla es grande o se hace clic en el botón burger */
 .nav-active {
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 10%;
-
+  z-index: 1;
   position: absolute;
   top: 10vh;
   left: 0;
@@ -178,6 +182,11 @@ h1{
 }
 h2{
   -webkit-text-stroke: 0.8px #333;
+}
+
+.btnhero{
+  min-width: 150px;
+  min-height: 75px;
 }
 
 /* hero cards */
@@ -325,9 +334,7 @@ iframe{
 }
 
 /*  carrusel */
-.carousel{
-  
-}
+
 .carousel-items-container{
   width: 100%;
   max-width: 1000px;
@@ -378,19 +385,52 @@ iframe{
 }
 /* card homologaciones */
 
-.homologacionesCont{
-  border: 1px solid black;
+.homologaciones{
+  /* background-image: url(../img/homologaciones/img0.jpg); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 60%;
 
-  max-width: 300px;
-  max-height: 600px;
-  padding: 30px;
-  border-radius: 25px;
 }
-.servicoMecanicoCont{
-  border: 1px solid black;
 
-  max-width: 300px;
-  max-height: 600px;
-  padding: 30px;
-  border-radius: 25px;
+/* Estilos para el carrusel de homologaciones */
+.homologaciones-carousel-items-container {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.homologaciones-carousel-item {
+  width: 100%;
+  height: 100%;
+  display: none;
+  transition: transform 0.5s ease;
+}
+.homologaciones-carousel-item img{
+  width: 100%;
+  height: auto;
+}
+.homologaciones-carousel-active {
+  display: flex;
+  transform: translateX(0);
+}
+
+.homologaciones-carousel-caption {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  display: none;
+  color: white;
+  padding: 5px 0;
+}
+
+/* servicio mecanico */
+
+.servMImg{
+  width: auto;
+  max-width: 100%;
+  height: 100%;
 }
